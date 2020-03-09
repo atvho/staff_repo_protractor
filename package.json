@@ -1,0 +1,23 @@
+{
+  "name": "staff_tests",
+  "version": "1.0.0",
+  "description": "some autotests",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node node_modules/protractor/bin/webdriver-manager update",
+    "pretest": "rd /s /q allure-results || mkdir allure-results",
+    "test": "protractor",
+    "posttest": "allure generate allure-results --clean -o allure-report"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^6.4.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.9.0",
+    "jasmine-allure-reporter": "^1.0.2"
+  }
+}
