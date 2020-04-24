@@ -8,7 +8,6 @@ describe('Sign in', function() {
 
     it('Should sign in user', function() {
         credentials.login();
-        expect(browser.wait(EC.urlContains('https://app.staff.com/#/dashboard'), 2000));
-        //browser.sleep(2000);   
+        expect(browser.wait(EC.urlContains('https://app.staff.com/#/dashboard'), 3000));
     });
 });
